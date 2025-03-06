@@ -1,37 +1,53 @@
-
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { GrAction } from "react-icons/gr";
+// import Hello from "./01/Hello"
+// import Hellodate from "./01/Hellodate"
+import { TiAdjustBrightness } from "react-icons/ti";
+import reactLogo from "./assets/react.svg"
+import viteLogo from "./assets/vite.png"
+// import MyClock from "./02/MyClock";
+// import MyDiv1 from "./03/MyDiv1"
+// import MyList from "./04/MyList" ;
+// import Lotto from "./05/Lotto";
+// import FoodCard from "./06/FoodCard";
+import FoodMain from "./06/FoodMain";
 
 function App() {
-
-
   return (
-    <>
-      <div>
-        <div className="w-full h-full bg-cyan-50">
-          <div className="w-full flex justify-center items-center p-50">
-            <a href="https://vite.dev" target="_blank">
-              <img src={viteLogo} className="logo" alt="Vite logo" />
-            </a>
-            <a href="https://react.dev" target="_blank">
-              <img src={reactLogo} className="logo react" alt="React logo" />
-            </a>
+    <div className="w-full xl:w-8/10 h-screen mx-auto 
+                      flex flex-col">
+      <header className="w-full min-h-20 bg-amber-100
+                            px-10
+                            flex justify-between items-center">
+        <div className="text-4xl font-bold text-amber-700 flex">
+          PNU KDT10
+          <div className="flex text-sm items-center mx-5">
+            <img src={reactLogo} alt="react" className="w-8" />
+            <img src={viteLogo} alt="vite" className="w-8" />
           </div>
-          <h1 className="text-xl">Vite + React</h1>
-          <div className="card">
-            <p>
-              부산대학교 이원준
-            </p>
-          </div>
-          <p className="w-full h-full flex justify-center items-center text-2xl text-blue-600/75 dark:text-sky-400/7">
-            < GrAction />
-          </p>
         </div>
-      </div>
-    </>
-  )
+
+        <div className="text-4xl font-bold text-blue">
+          <TiAdjustBrightness />
+          
+        </div>
+      </header>
+
+      <main className="w-full  flex-grow
+                        pt-10
+                        flex flex-col justify-center items-center
+                        overflow-y-auto">
+        {/* <MyList /> */}
+        {/* <MyDiv1 /> */}
+        {/* <MyClock/> */}
+        {/* {<Lotto/>} */}
+        {<FoodMain/>}
+      </main>
+      <footer className="w-full min-h-20 bg-amber-100
+                          px-10 text-xl text-black font-bold
+                          flex justify-center items-center">
+        🐱‍👤[K-Digital 부산대] 풀스택 웹 개발자👨‍💻 _리액트🐱‍👤
+      </footer>
+    </div>
+  );
 }
 
 export default App
