@@ -43,14 +43,14 @@ export default function Lotto() {
 
 
   return (
-    <div className='w-11/12 h-full flex flex-col justify-center items-center'>
+    <div className='w-11/12 h-180 flex flex-col justify-center items-center'>
      <div className='w-full flex justify-center items-center
                     mb-10'>
         {lottoTags}                
     </div>
-    <div>
+    <div className='p-10'>
         <TailButton caption="로또번호생성" color="blue" onClick={handleLottoNum} />
-        <TailButton caption="로또번호생성" color="orange" onClick={handleLottoNum} />
+        {/* <TailButton caption="로또번호생성" color="orange" onClick={handleLottoNum} /> */}
     </div>
     </div>
   )

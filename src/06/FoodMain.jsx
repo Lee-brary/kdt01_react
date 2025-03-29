@@ -18,7 +18,7 @@ export default function FoodMain() {
 
     //배열로 받은 것을 테그로 출력
     let tm = fooddata.filter((item) => item['운영주체 분류'].replaceAll(' ', '') == c) ;
-    console.log("handleCategroy", tm) ;
+   
 
     
     const tg = tm.map(item => <FoodCard 
@@ -31,6 +31,7 @@ export default function FoodMain() {
 
   //버튼을 컴포넌트화해서 통일성 가짐
   //카테고리 분류해서 선택한 것만 출력하려면 filter
+
   const btn = category.map(item =>
                                   <Tailbutton
                                     key={item}
@@ -43,11 +44,10 @@ export default function FoodMain() {
 
   return (
     <div className='w-11/12'>
-  
-      <div className='rounded-sm'>
+      <div className='w-full h-1/4 flex items-center justify-center rounded-sm'>
         {btn}
       </div>
-      <div className='w-full h-full my-10 grid grid-cols-1 lg:grid-cols-2 gap-4 rounded-sm border-black'>
+      <div className='w-full h-10 my-10 grid grid-cols-1 lg:grid-cols-2 gap-4 rounded-sm border-black'>
         {tags}
       </div>
     </div >
